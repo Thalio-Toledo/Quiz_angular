@@ -1,0 +1,46 @@
+.pergunta-card{
+  background: linear-gradient(90deg, rgba(73,245,252,1) 0%, rgba(112,217,223,1) 26%, rgba(0,212,255,1) 100%);
+  padding: 20px;
+  width: 25rem;
+  border-radius: 10px;
+}
+
+.opcoes{
+  display: flex;
+  flex-direction: column;
+
+}
+button.opcao{
+  text-align: start;
+  background-color: rgb(251, 124, 255);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: solid 2px rgb(206, 0, 224);
+
+}
+button.opcao:hover{
+  background-color: rgb(71, 0, 80);
+  color: white;
+}
+
+.certo{
+  color: rgb(255, 255, 255);
+  background-color: rgb(183, 80, 252);
+}
+
+button{
+  transition: all .2s ease-in-out;
+}
+
+button.correto{
+  background-color: rgb(101, 224, 101);
+  transform: scale(1.1);
+}
+button.incorreto{
+  background-color: rgb(253, 71, 71);
+  opacity: 0.8;
+}
+button.invalido{
+  opacity: 0.5;
+}
