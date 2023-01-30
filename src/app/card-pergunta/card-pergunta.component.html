@@ -1,0 +1,39 @@
+<ng-container *ngFor="let card of cardPerguntas" >
+  <div *ngIf="card.ativo" class="card">
+
+    <div class="pergunta" >
+      {{card.pergunta}}
+    </div>
+
+    <div
+     *ngFor="let alternativa of card.alternativas; let i = index"
+
+     class="alternativas-container"
+
+     >
+      <button class="alternativa"
+      (click)="verificarResposta(card,alternativa)"
+      >
+        {{i + 1  }} - {{alternativa}}
+      </button>
+
+    </div>
+  </div>
+
+</ng-container>
+
+
+<div class="milhao" *ngIf="jogo">
+  <p>Você ganhou um milhão!</p>
+  <img src="../../assets/imagens/Milhao1.png" alt="">
+</div>
+
+<!-- <div class="caminho-milhao-container">
+
+  <div  *ngFor="let valor of caminhoDoMilao">
+    <button class="valor">{{valor.valor}}</button>
+  </div>
+
+</div> -->
+
+

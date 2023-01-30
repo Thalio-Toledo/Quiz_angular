@@ -1,15 +1,12 @@
-<ng-container *ngFor="let itemPergunta of perguntas">
+olá
+
+
+<div *ngFor="let itemPergunta of perguntas">
 
   <div *ngIf="itemPergunta.ativo" class="pergunta-card">
 
     <div class="pergunta">{{itemPergunta.questao}}</div>
 
-    <div class="opcoes">
-      <!-- <button class="opcao">A - {{pergunta.A}}</button>
-      <button class="opcao">B - {{pergunta.B}}</button>
-      <button class="opcao">C - {{pergunta.C}}</button>
-      <button class="opcao">D - {{pergunta.D}}</button> -->
-    </div>
 
     <div *ngFor="let itemAlternativa of itemPergunta.alternativas; let i = index " class="opcoes">
       <button (click)="verificarResposta(itemPergunta,itemAlternativa)"
@@ -20,4 +17,6 @@
 
   </div>
 
-</ng-container>
+
+
+</div>
