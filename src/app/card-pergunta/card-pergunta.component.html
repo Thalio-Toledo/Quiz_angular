@@ -13,6 +13,7 @@
      >
       <button class="alternativa"
       (click)="verificarResposta(card,alternativa)"
+      [ngClass]="getClass(card,alternativa)"
       >
         {{i + 1  }} - {{alternativa}}
       </button>

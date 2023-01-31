@@ -77,11 +77,25 @@ export class CardPerguntaComponent {
 
       }
 
-
-
-
- console.log(indexPerguntaAtual)
-// console.log(this.cardPerguntas.length-1)
     }
+
+    getClass(cardPergunta: CardPergunta, alternativa: string):string[]{
+      let cssClass:string[] =[]
+
+      if(cardPergunta.alternativaSelecionada){
+        if(alternativa == cardPergunta.alternativaCerta){
+          cssClass.push("certo")
+        }else{
+          cssClass.push("errado")
+        }
+
+          
+      }
+      return cssClass
+
+    }
+    
   }
+
+
 

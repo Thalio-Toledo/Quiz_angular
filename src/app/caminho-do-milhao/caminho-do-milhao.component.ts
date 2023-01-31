@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { valorMilhao } from './valorMilhao';
 
 @Component({
@@ -9,15 +9,17 @@ import { valorMilhao } from './valorMilhao';
 export class CaminhoDoMilhaoComponent {
   caminhoDoMilao:valorMilhao[]=[
     {id:1,valor:'R$ 500'},
-    {id:1,valor:'R$ 1.000'},
-    {id:1,valor:'R$ 2.000'},
-    {id:1,valor:'R$ 5.000'},
-    {id:1,valor:'R$ 10.000'},
-    {id:1,valor:'R$ 25.000'},
-    {id:1,valor:'R$ 50.000'},
-    {id:1,valor:'R$ 100.000'},
-    {id:1,valor:'R$ 500.000'},
-    {id:1,valor:'R$ 1000.000'}
+    {id:2,valor:'R$ 1.000'},
+    {id:3,valor:'R$ 2.000'},
+    {id:4,valor:'R$ 5.000'},
+    {id:5,valor:'R$ 10.000'},
+    {id:6,valor:'R$ 25.000'},
+    {id:7,valor:'R$ 50.000'},
+    {id:8,valor:'R$ 100.000'},
+    {id:9,valor:'R$ 500.000'},
+    {id:10,valor:'R$ 1000.000'}
   ]
-
+  @Input() autor:string= '';
+  @Input() pergunta:string[] =[]
+ 
 }
