@@ -5,4 +5,6 @@ export interface CardPergunta{
   alternativaCerta:string
   alternativaSelecionada? : string
   ativo? : boolean
+  teste?:string[]
+  valor?:string
 }

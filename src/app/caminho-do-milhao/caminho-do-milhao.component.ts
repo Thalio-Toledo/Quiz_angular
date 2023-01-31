@@ -1,3 +1,4 @@
+import { CardPergunta } from './../componentes/pergunta/CardPergunta';
 import { Component, Input } from '@angular/core';
 import { valorMilhao } from './valorMilhao';
 
@@ -20,6 +21,16 @@ export class CaminhoDoMilhaoComponent {
     {id:10,valor:'R$ 1000.000'}
   ]
   @Input() autor:string= '';
-  @Input() pergunta:string[] =[]
- 
+  @Input() perguntas:CardPergunta[] = []
+
+
+  getValor(teste:CardPergunta):void{
+    console.log(teste)
+  }
+  // getClassCss(pergunta:CardPergunta):string[]{
+  //   let cssClass:string[] =[]
+  //   cssClass.push(pergunta.teste)
+  //   return cssClass
+  // }
+
 }

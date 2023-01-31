@@ -1,10 +1,10 @@
 <div class="caminho-milhao-container">
 
-  <div  *ngFor="let valor of caminhoDoMilao">
+  <!-- <div  *ngFor="let valor of caminhoDoMilao">
     <button class="valor">{{valor.valor}}</button>
-  </div>
-  <div *ngFor="let nome of pergunta">
-    <p>{{nome}}</p>
+  </div> -->
+  <div *ngFor="let pergunta of perguntas">
+    <button class="valor" [ngClass]="this.pergunta.teste" (click)="getValor(pergunta)">{{pergunta.valor}}</button>
   </div>
 
 </div>

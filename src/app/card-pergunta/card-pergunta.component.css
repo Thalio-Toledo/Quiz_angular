@@ -1,3 +1,8 @@
+.jogo-container{
+  display: flex;
+}
+
+
 .card{
   background: linear-gradient(90deg, rgba(73,245,252,1) 0%, rgba(112,217,223,1) 26%, rgba(0,212,255,1) 100%);
   padding: 20px;
@@ -72,6 +77,16 @@ button.errado{
   opacity: 0.8;
 }
 
+button.voltar{
+  margin-top: 150px;
+  background-color: rgb(8, 102, 243);
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+  color:white;
+  border: solid 2px white;
+}
 
 
 

@@ -1,40 +1,45 @@
-<ng-container *ngFor="let card of cardPerguntas" >
-  <div *ngIf="card.ativo" class="card">
+<div class="jogo-container">
 
-    <div class="pergunta" >
-      {{card.pergunta}}
+  <ng-container *ngFor="let card of cardPerguntas" >
+    <div *ngIf="card.ativo" class="card">
+
+      <div class="pergunta" >
+        {{card.pergunta}}
     </div>
 
     <div
-     *ngFor="let alternativa of card.alternativas; let i = index"
+    *ngFor="let alternativa of card.alternativas; let i = index"
 
-     class="alternativas-container"
+    class="alternativas-container"
 
-     >
-      <button class="alternativa"
-      (click)="verificarResposta(card,alternativa)"
-      [ngClass]="getClass(card,alternativa)"
-      >
-        {{i + 1  }} - {{alternativa}}
-      </button>
+    >
+    <button class="alternativa"
+    (click)="verificarResposta(card,alternativa)"
+    [ngClass]="getClass(card,alternativa)"
+    >
+    {{i + 1  }} - {{alternativa}}
+  </button>
 
-    </div>
-  </div>
-
-</ng-container>
-
-
-<div class="milhao" *ngIf="jogo">
-  <p>Você ganhou um milhão!</p>
-  <img src="../../assets/imagens/Milhao1.png" alt="">
+</div>
+<Button class="voltar" routerLink="/inicio">Voltar</Button>
 </div>
 
-<!-- <div class="caminho-milhao-container">
-
-  <div  *ngFor="let valor of caminhoDoMilao">
-    <button class="valor">{{valor.valor}}</button>
+</ng-container>
+<div class="milhao" *ngIf="jogo">
+  <p>Você ganhou um milhão!</p>
+    <img src="../../assets/imagens/Milhao1.png" alt="">
   </div>
 
-</div> -->
+  <div class="milhao" *ngIf="gameOver">
+    <p>Você perdeu!</p>
+    </div>
 
+
+<div class="caminho-do-milhao">
+  <app-caminho-do-milhao [perguntas]="cardPerguntas"></app-caminho-do-milhao>
+
+</div>
+
+
+</div>
 
